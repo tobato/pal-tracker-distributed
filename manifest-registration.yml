@@ -5,8 +5,9 @@ applications:
   memory: 1G
   instances: 1
   env:
-#    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-wuyf.apps.longs.pal.pivotal.io/
      TRUST_CERTS: api.sys.longs.pal.pivotal.io
   services:
   - tracker-registration-database
   - tracker-service-registry
+  - tracker-circuit-breaker-dashboard
+  - tracker-amqp
