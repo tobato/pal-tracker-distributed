@@ -28,6 +28,9 @@ dependencies {
     compile "org.springframework.cloud:spring-cloud-sleuth-stream"
     compile "org.springframework.cloud:spring-cloud-starter-stream-rabbit"
 
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-config-client"
+
+
     testCompile project(":components:test-support")
 }
 
@@ -38,5 +41,10 @@ bootRun.environment([
         //The SECURITY_USER_NAME and SECURITY_USER_PASSWORD variables
         // will be used to access Actuator endpoints
         "SECURITY_USER_NAME": "actuator",
+        "REGISTRATION_SERVER_ENDPOINT": "http://registration-server",
         "SECURITY_USER_PASSWORD": "operations4red"
+])
+
+test.environment([
+        "REGISTRATION_SERVER_ENDPOINT": "http://registration-server",
 ])
