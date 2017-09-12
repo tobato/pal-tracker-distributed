@@ -1,4 +1,4 @@
-package io.pivotal.pal.tracker.eurekaserver;
+package io.pivotal.pal.tracker.oauthserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
